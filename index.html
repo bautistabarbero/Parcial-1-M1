@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Shop AR - Celulares y equipos para creadores</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!-- Encabezado de la tienda y título principal -->
+    <header class="encabezado-principal">
+        <h1>B Shop AR</h1>
+        <p>Tecnología para tu día a día y tus ideas.</p>
+
+        <!-- Los enlaces llevan a secciones de esta misma página -->
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#creadores">Creadores</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal: cada section agrupa un tema -->
+    <main class="contenido-principal">
+        <section id="productos">
+            <h2>Celulares y tecnología</h2>
+            <p>Conocé nuestras opciones de celulares y equipos para crear contenido.</p>
+
+            <!-- Ficha independiente: utiliza el modelo content-box -->
+            <article class="producto producto-celular">
+                <h3>Celulares</h3>
+                <p>iPhone y accesorios para acompañarte en tu día a día.</p>
+            </article>
+
+            <!-- Misma clase producto: solo cambia el modelo de caja -->
+            <article class="producto producto-microfono">
+                <h3>Micrófonos</h3>
+                <p>Equipos para grabar tu voz en videos y entrevistas.</p>
+            </article>
+        </section>
+
+        <!-- Este padre tiene border-box; su article no lo hereda -->
+        <section id="creadores" class="seccion-creadores">
+            <h2>Equipos para creadores</h2>
+            <p>Iluminación y soportes para preparar tus grabaciones.</p>
+
+            <!-- No se declara box-sizing en esta ficha: usa content-box -->
+            <article class="equipo-creador">
+                <h3>Luces y trípodes</h3>
+                <p>Paneles de luz, mini luces y trípodes para tus proyectos.</p>
+            </article>
+        </section>
+
+        <section id="nosotros">
+            <h2>Sobre B Shop AR</h2>
+            <p>
+                Somos una tienda de celulares, accesorios y equipos para
+                creadores de contenido. Reunimos tecnología para el uso
+                diario y herramientas para producir videos y fotografías.
+            </p>
+        </section>
+    </main>
+
+    <!-- Información final de la página -->
+    <footer class="pie-principal">
+        <p>B Shop AR - Celulares y equipos para creadores.</p>
+        <p>Trabajo realizado por Bautista Barbero - Aplicaciones Web 1.</p>
+    </footer>
+</body>
+
+</html>

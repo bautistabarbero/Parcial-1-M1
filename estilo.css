@@ -1,0 +1,101 @@
+/* RESETEO GLOBAL */
+/* El selector universal elimina márgenes y rellenos predeterminados.
+   No se aplica box-sizing aquí para poder comprobar la no herencia. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+.encabezado-principal {
+    padding: 25px;
+    color: white;
+    background-color: #222222;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+/* Selector combinado: enlaces que están dentro de nav */
+nav a {
+    margin-right: 15px;
+    color: white;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+    padding: 25px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* COMPARACIÓN DEL MODELO DE CAJA */
+/* Las dos fichas comparten width, height, padding, border y margin. */
+.producto {
+    width: 300px;
+    height: 180px;
+    padding: 20px;
+    border: 5px solid #222222;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* 300 + 40 de padding + 10 de borde = 350px de ancho exterior.
+   180 + 40 de padding + 10 de borde = 230px de alto exterior. */
+.producto-celular {
+    box-sizing: content-box;
+}
+
+/* Padding y borde quedan incluidos: tamaño exterior de 300 x 180px.
+   El margin queda fuera de las dimensiones en ambos modelos. */
+.producto-microfono {
+    box-sizing: border-box;
+}
+
+/* PRUEBA DE HERENCIA */
+/* El padre utiliza el modelo alternativo. */
+.seccion-creadores {
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #222222;
+    background-color: #eeeeee;
+}
+
+/* box-sizing no se hereda por defecto.
+   Al no declararlo en este article, conserva content-box.
+   Su tamaño exterior es de 350 x 230px. */
+.equipo-creador {
+    width: 300px;
+    height: 180px;
+    padding: 20px;
+    border: 5px solid #222222;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* PIE DE PÁGINA */
+.pie-principal {
+    padding: 25px;
+    border-top: 2px solid #222222;
+    background-color: white;
+}
